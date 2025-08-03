@@ -56,6 +56,7 @@ jobs:
             # Apply all manifests
             kubectl apply -f clickhouse-deployment.yml
             kubectl apply -f clickhouse-service.yml
+            kubectl apply -f clickhouse-configmap.yml
 
             # Force rollout restart to reload pods with the latest image
             kubectl rollout restart deployment clickhouse-deployment
